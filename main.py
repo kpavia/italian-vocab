@@ -7,9 +7,10 @@ kitchen_items = {"kitchen": "cucina", "kitchen sink": "lavello", "fork": "forche
                  "knife": "coltello", "cup": "tazza", "plate": "piatto", "oven": "forno", "stove": "fornelli",
                  "refrigerator": "frigorifero", "microwave": "microonde", "sauce pan": "padella", "pot": "pentola"}
 
-common_food_items = {"garlic": "aglio", "oil": "olio", "basil": "basilico", "cheese": "formaggio",
-                     "mozzarella": "mozzarella", "parmesan": "parmigiano", "tomato": "pomodoro", "sauce": "salsa",
-                     "vegetables": "verdura", "fruit": "frutta", "bread": "pane", "grain": "cereali"}
+food_items = {"garlic": "aglio", "oil": "olio", "basil": "basilico", "cheese": "formaggio",
+              "mozzarella": "mozzarella", "parmesan": "parmigiano", "tomato": "pomodoro", "sauce": "salsa",
+              "vegetables": "verdura", "fruit": "frutta", "bread": "pane", "grain": "cereali",
+              "liquid": "liquido", "powder": "polvere", "cream": "crema"}
 
 
 def room_quiz():
