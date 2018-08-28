@@ -5,7 +5,8 @@ room_items = {"floor": "pavimento", "ceiling": "soffitto", "shelf": "scaffale", 
 
 kitchen_items = {"kitchen": "cucina", "kitchen sink": "lavello", "fork": "forchetta", "spoon": "cuchiaio",
                  "knife": "coltello", "cup": "tazza", "plate": "piatto", "oven": "forno", "stove": "fornelli",
-                 "refrigerator": "frigorifero", "microwave": "microonde", "sauce pan": "padella", "pot": "pentola"}
+                 "refrigerator": "frigorifero", "microwave": "microonde", "sauce pan": "padella", "pot": "pentola",
+                 "bowl": "ciotola"}
 
 food_items = {"garlic": "aglio", "oil": "olio", "basil": "basilico", "cheese": "formaggio",
               "mozzarella": "mozzarella", "parmesan": "parmigiano", "tomato": "pomodoro", "sauce": "salsa",
@@ -40,5 +41,5 @@ def room_quiz():
               f'Total: {len(room_items)}')
 
 
-
+room_quiz()
 
