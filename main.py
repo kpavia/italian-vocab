@@ -10,8 +10,8 @@ kitchen_items = {"kitchen": "cucina", "kitchen sink": "lavello", "fork": "forche
 
 food_items = {"garlic": "aglio", "oil": "olio", "basil": "basilico", "cheese": "formaggio",
               "mozzarella": "mozzarella", "parmesan": "parmigiano", "tomato": "pomodoro", "sauce": "salsa",
-              "vegetables": "verdura", "fruit": "frutta", "bread": "pane", "grain": "cereali",
-              "liquid": "liquido", "powder": "polvere", "cream": "crema"}
+              "vegetables": "verdura", "fruit": "frutta", "bread": "pane", "grain": "cereali", "liquid": "liquido",
+              "powder": "polvere", "cream": "crema"}
 
 
 def room_quiz():
@@ -41,5 +41,32 @@ def room_quiz():
               f'Total: {len(room_items)}')
 
 
-room_quiz()
+def kitchen_quiz():
+    correct = 0
+    wrong = 0
+    print("Translate the word into Italian.")
+    for item in kitchen_items:
+        question = input(f'{item} in Italian is:\n').lower()
+        if kitchen_items[item] == question:
+            print("Correct!")
+            correct += 1
+        else:
+            print(f'Wrong. Answer is {kitchen_items[item]}')
+            wrong += 1
+            i = 0
+            while i < 10:
+                i += 1
+                review = input(f'{item} in Italian is:\n').lower()
+                if kitchen_items[item] == review:
+                    print("Correct!")
+                else:
+                    print(f'Wrong. Answer is {kitchen_items[item]}')
+    else:
+        print(f'Results\n'
+              f'Correct: {correct}\n'
+              f'Wrong: {wrong}\n'
+              f'Total: {len(kitchen_items)}')
+
+
+kitchen_quiz()
 
