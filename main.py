@@ -198,16 +198,16 @@ def indirect_objects_quiz():
 
 
 def menu():
-    print("Welcome to Italian vocabulary practice.\nPlease enter the menu option number to begin.")
-    print("1 - Room items quiz\n"
-          "2 - Kitchen items quiz\n"
-          "3 - Food items quiz\n"
-          "4 - Ordinal numbers quiz\n"
-          "5 - Direct Object Pronouns quiz\n"
-          "6 - Indirect Object Pronouns quiz\n"
-          "7 - Quit program")
     practice = True
     while practice:
+        print("\nWelcome to Italian vocabulary practice.\nPlease enter the menu option number to begin.\n")
+        print("1 - Room items quiz\n"
+              "2 - Kitchen items quiz\n"
+              "3 - Food items quiz\n"
+              "4 - Ordinal numbers quiz\n"
+              "5 - Direct Object Pronouns quiz\n"
+              "6 - Indirect Object Pronouns quiz\n"
+              "7 - Quit program\n")
         selection = input("Enter your selection: ")
         if selection == "1":
             room_quiz()
