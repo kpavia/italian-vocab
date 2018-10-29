@@ -205,7 +205,7 @@ def menu():
           "4 - Ordinal numbers quiz\n"
           "5 - Direct Object Pronouns quiz\n"
           "6 - Indirect Object Pronouns quiz")
-    selection = input()
+    selection = input("Enter your selection: ")
     if selection == "1":
         room_quiz()
     elif selection == "2":
@@ -219,6 +219,5 @@ def menu():
     elif selection == "6":
         indirect_objects_quiz()
 
+
 menu()
-
-
