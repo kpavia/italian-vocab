@@ -48,7 +48,7 @@ def room_quiz():
             print(f'Wrong. Answer is {room_items[item]}')
             wrong += 1
             i = 0
-            while i < 10:
+            while i <= 5:
                 i += 1
                 review = input(f'{item} in Italian is:\n').lower()
                 if room_items[item] == review:
@@ -75,7 +75,7 @@ def kitchen_quiz():
             print(f'Wrong. Answer is {kitchen_items[item]}')
             wrong += 1
             i = 0
-            while i < 10:
+            while i <= 5:
                 i += 1
                 review = input(f'{item} in Italian is:\n').lower()
                 if kitchen_items[item] == review:
@@ -102,7 +102,7 @@ def food_quiz():
             print(f'Wrong. Answer is {food_items[item]}')
             wrong += 1
             i = 0
-            while i < 5:
+            while i <= 5:
                 i += 1
                 review = input(f'{item} in Italian is:\n').lower()
                 if food_items[item] == review:
@@ -129,7 +129,7 @@ def ordinal_numbers_quiz():
             print(f'Wrong. Answer is {ordinal_numbers[number]}')
             wrong += 1
             i = 0
-            while i < 10:
+            while i <= 5:
                 i += 1
                 review = input(f'{number} in Italian is:\n').lower()
                 if ordinal_numbers[number] == review:
@@ -156,7 +156,7 @@ def direct_objects_quiz():
             print(f'Wrong. Answer is {direct_object_pronouns[pronoun]}')
             wrong += 1
             i = 0
-            while i < 10:
+            while i <= 5:
                 i += 1
                 review = input(f'{pronoun} in Italian is:\n').lower()
                 if direct_object_pronouns[pronoun] == review:
@@ -183,7 +183,7 @@ def indirect_objects_quiz():
             print(f'Wrong. Answer is {indirect_object_pronouns[pronoun]}')
             wrong += 1
             i = 0
-            while i < 10:
+            while i <= 5:
                 i += 1
                 review = input(f'{pronoun} in Italian is:\n').lower()
                 if indirect_object_pronouns[pronoun] == review:
