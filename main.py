@@ -204,20 +204,29 @@ def menu():
           "3 - Food items quiz\n"
           "4 - Ordinal numbers quiz\n"
           "5 - Direct Object Pronouns quiz\n"
-          "6 - Indirect Object Pronouns quiz")
-    selection = input("Enter your selection: ")
-    if selection == "1":
-        room_quiz()
-    elif selection == "2":
-        kitchen_quiz()
-    elif selection == "3":
-        food_quiz()
-    elif selection == "4":
-        ordinal_numbers_quiz()
-    elif selection == "5":
-        direct_objects_quiz()
-    elif selection == "6":
-        indirect_objects_quiz()
+          "6 - Indirect Object Pronouns quiz\n"
+          "7 - Quit program")
+    practice = True
+    while practice:
+        selection = input("Enter your selection: ")
+        if selection == "1":
+            room_quiz()
+        elif selection == "2":
+            kitchen_quiz()
+        elif selection == "3":
+            food_quiz()
+        elif selection == "4":
+            ordinal_numbers_quiz()
+        elif selection == "5":
+            direct_objects_quiz()
+        elif selection == "6":
+            indirect_objects_quiz()
+        elif selection == "7":
+            practice = False
+            print("Thank you for practicing.")
+        else:
+            "Please select an option."
+    quit()
 
 
 menu()
