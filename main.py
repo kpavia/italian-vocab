@@ -34,167 +34,34 @@ indirect_object_pronouns = {"1st person singular": "mi", "2nd person singular": 
                             "3rd person singular masc.": "gli", "3rd person singular fem.": "le",
                             "1st person plural": "ci", "2nd person plural": "vi", "3rd person plural": "loro"}
 
+holiday_words = {"holiday": "festa", "to celebrate": "festeggiare"}
 
-def room_quiz():
+
+def quiz(choice):
     correct = 0
     wrong = 0
     print("Translate the word into Italian.")
-    for item in room_items:
+    for item in choice:
         question = input(f'{item} in Italian is:\n').lower()
-        if room_items[item] == question:
+        if choice[item] == question:
             print("Correct!")
             correct += 1
         else:
-            print(f'Wrong. Answer is {room_items[item]}')
+            print(f'Wrong. Answer is {choice[item]}')
             wrong += 1
             i = 0
             while i <= 5:
                 i += 1
                 review = input(f'{item} in Italian is:\n').lower()
-                if room_items[item] == review:
+                if choice[item] == review:
                     print("Correct!")
                 else:
-                    print(f'Wrong. Answer is {room_items[item]}')
+                    print(f'Wrong. Answer is {choice[item]}')
     else:
         print(f'Results\n'
               f'Correct: {correct}\n'
               f'Wrong: {wrong}\n'
-              f'Total: {len(room_items)}')
-
-
-def kitchen_quiz():
-    correct = 0
-    wrong = 0
-    print("Translate the word into Italian.")
-    for item in kitchen_items:
-        question = input(f'{item} in Italian is:\n').lower()
-        if kitchen_items[item] == question:
-            print("Correct!")
-            correct += 1
-        else:
-            print(f'Wrong. Answer is {kitchen_items[item]}')
-            wrong += 1
-            i = 0
-            while i <= 5:
-                i += 1
-                review = input(f'{item} in Italian is:\n').lower()
-                if kitchen_items[item] == review:
-                    print("Correct!")
-                else:
-                    print(f'Wrong. Answer is {kitchen_items[item]}')
-    else:
-        print(f'Results\n'
-              f'Correct: {correct}\n'
-              f'Wrong: {wrong}\n'
-              f'Total: {len(kitchen_items)}')
-
-
-def food_quiz():
-    correct = 0
-    wrong = 0
-    print("Translate the word into Italian.")
-    for item in food_items:
-        question = input(f'{item} in Italian is:\n').lower()
-        if food_items[item] == question:
-            print("Correct!")
-            correct += 1
-        else:
-            print(f'Wrong. Answer is {food_items[item]}')
-            wrong += 1
-            i = 0
-            while i <= 5:
-                i += 1
-                review = input(f'{item} in Italian is:\n').lower()
-                if food_items[item] == review:
-                    print("Correct!")
-                else:
-                    print(f'Wrong. Answer is {food_items[item]}')
-    else:
-        print(f'Results\n'
-              f'Correct: {correct}\n'
-              f'Wrong: {wrong}\n'
-              f'Total: {len(food_items)}')
-
-
-def ordinal_numbers_quiz():
-    correct = 0
-    wrong = 0
-    print("Translate the word into Italian.")
-    for number in ordinal_numbers:
-        question = input(f'{number} in Italian is:\n').lower()
-        if ordinal_numbers[number] == question:
-            print("Correct!")
-            correct += 1
-        else:
-            print(f'Wrong. Answer is {ordinal_numbers[number]}')
-            wrong += 1
-            i = 0
-            while i <= 5:
-                i += 1
-                review = input(f'{number} in Italian is:\n').lower()
-                if ordinal_numbers[number] == review:
-                    print("Correct!")
-                else:
-                    print(f'Wrong. Answer is {ordinal_numbers[number]}')
-    else:
-        print(f'Results\n'
-              f'Correct: {correct}\n'
-              f'Wrong: {wrong}\n'
-              f'Total: {len(ordinal_numbers)}')
-
-
-def direct_objects_quiz():
-    correct = 0
-    wrong = 0
-    print("Translate the word into Italian.")
-    for pronoun in direct_object_pronouns:
-        question = input(f'{pronoun} in Italian is:\n').lower()
-        if direct_object_pronouns[pronoun] == question:
-            print("Correct!")
-            correct += 1
-        else:
-            print(f'Wrong. Answer is {direct_object_pronouns[pronoun]}')
-            wrong += 1
-            i = 0
-            while i <= 5:
-                i += 1
-                review = input(f'{pronoun} in Italian is:\n').lower()
-                if direct_object_pronouns[pronoun] == review:
-                    print("Correct!")
-                else:
-                    print(f'Wrong. Answer is {direct_object_pronouns[pronoun]}')
-    else:
-        print(f'Results\n'
-              f'Correct: {correct}\n'
-              f'Wrong: {wrong}\n'
-              f'Total: {len(direct_object_pronouns)}')
-
-
-def indirect_objects_quiz():
-    correct = 0
-    wrong = 0
-    print("Translate the word into Italian.")
-    for pronoun in indirect_object_pronouns:
-        question = input(f'{pronoun} in Italian is:\n').lower()
-        if indirect_object_pronouns[pronoun] == question:
-            print("Correct!")
-            correct += 1
-        else:
-            print(f'Wrong. Answer is {indirect_object_pronouns[pronoun]}')
-            wrong += 1
-            i = 0
-            while i <= 5:
-                i += 1
-                review = input(f'{pronoun} in Italian is:\n').lower()
-                if indirect_object_pronouns[pronoun] == review:
-                    print("Correct!")
-                else:
-                    print(f'Wrong. Answer is {indirect_object_pronouns[pronoun]}')
-    else:
-        print(f'Results\n'
-              f'Correct: {correct}\n'
-              f'Wrong: {wrong}\n'
-              f'Total: {len(indirect_object_pronouns)}')
+              f'Total: {len(choice)}')
 
 
 def menu():
@@ -207,21 +74,31 @@ def menu():
               "4 - Ordinal numbers quiz\n"
               "5 - Direct Object Pronouns quiz\n"
               "6 - Indirect Object Pronouns quiz\n"
-              "7 - Quit program\n")
+              "7 - Holiday words quiz\n"
+              "8 - Quit program\n")
         selection = input("Enter your selection: ")
         if selection == "1":
-            room_quiz()
+            print("Starting room items quiz")
+            quiz(room_items)
         elif selection == "2":
-            kitchen_quiz()
+            print("Starting kitchen items quiz")
+            quiz(kitchen_items)
         elif selection == "3":
-            food_quiz()
+            print("Starting food items quiz")
+            quiz(food_items)
         elif selection == "4":
-            ordinal_numbers_quiz()
+            print("Starting ordinal numbers quiz")
+            quiz(ordinal_numbers)
         elif selection == "5":
-            direct_objects_quiz()
+            print("Starting direct object pronouns quiz")
+            quiz(direct_object_pronouns)
         elif selection == "6":
-            indirect_objects_quiz()
+            print("Starting indirect object pronouns quiz")
+            quiz(indirect_object_pronouns)
         elif selection == "7":
+            print("Starting holiday words quiz")
+            quiz(holiday_words)
+        elif selection == "8":
             practice = False
             print("Thank you for practicing.")
         else:
