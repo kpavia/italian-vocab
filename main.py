@@ -36,7 +36,7 @@ indirect_object_pronouns = {"1st person singular": "mi", "2nd person singular": 
 
 holiday_words = {"holiday": "festa", "to celebrate": "festeggiare"}
 
-car_words = {"portiera": "door", "maniglia": "handle", "olante": "steering wheel", "il freno/i freni": "brakes",
+car_words = {"portiera": "door", "maniglia": "handle", "volante": "steering wheel", "il freno/i freni": "brakes",
              "finestrini": "windows", "parabrezza": "windshield", "tergicristalli": "wipers", "il faro/i fari":
              "headlights", "cruscotto": "dashboard", "paraurti": "bumper", "antenna": "antenna", "tettuccio": "roof",
              "il baule": "trunk", "le ruote": "tires", "incidentale": "accident", "assicurazione": "insurance"}
