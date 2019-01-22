@@ -36,6 +36,16 @@ indirect_object_pronouns = {"1st person singular": "mi", "2nd person singular": 
 
 holiday_words = {"holiday": "festa", "to celebrate": "festeggiare"}
 
+car_words = {"portiera": "door", "maniglia": "handle", "olante": "steering wheel", "il freno/i freni": "brakes",
+             "finestrini": "windows", "parabrezza": "windshield", "tergicristalli": "wipers", "il faro/i fari":
+             "headlights", "cruscotto": "dashboard", "paraurti": "bumper", "antenna": "antenna", "tettuccio": "roof",
+             "il baule": "trunk", "le ruote": "tires", "incidentale": "accident", "assicurazione": "insurance"}
+
+months_seasons = {"gennaio": "January", "febbraio": "February", "marzo": "March", "aprile": "April", "maggio": "May",
+                  "giugno": "June", "luglio": "July", "agosto": "August", "septembre": "September", "ottobre":
+                  "October", "novembre": "November", "dicembre": "December", "l'inverno": "winter", "l'estate":
+                  "summer", "primavera": "spring", "lo autunno": "fall"}
+
 
 def quiz(choice):
     correct = 0
@@ -75,7 +85,9 @@ def menu():
               "5 - Direct Object Pronouns quiz\n"
               "6 - Indirect Object Pronouns quiz\n"
               "7 - Holiday words quiz\n"
-              "8 - Quit program\n")
+              "8 - Car words\n"
+              "9 - Months and seasons\n"
+              "10 - Quit program\n")
         selection = input("Enter your selection: ")
         if selection == "1":
             print("Starting room items quiz")
@@ -99,6 +111,12 @@ def menu():
             print("Starting holiday words quiz")
             quiz(holiday_words)
         elif selection == "8":
+            print("Starting car words quiz")
+            quiz(car_words)
+        elif selection == "9":
+            print("Starting months and seasons quiz")
+            quiz(months_seasons)
+        elif selection == "10":
             practice = False
             print("Thank you for practicing.")
         else:
