@@ -52,7 +52,7 @@ def quiz(choice):
     wrong = 0
     print("Translate the word into Italian.")
     for item in choice:
-        question = input(f'{item} in Italian is:\n').lower()
+        question = input(f'{item} in Italian is:\n')
         if choice[item] == question:
             print("Correct!")
             correct += 1
