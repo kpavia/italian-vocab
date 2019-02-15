@@ -1,3 +1,5 @@
+import random
+
 room_items = {"floor": "pavimento", "ceiling": "soffitto", "shelf": "scaffale", "wall": "parete", "window": "finestra",
               "door": "porta", "chair": "sedia", "armchair": "poltrona", "couch": "divano", "carpet": "moquette",
               "cushions": "cuscini", "coffee table": "tavolino", "rug": "tappeto", "bed": "letto", "room": "stanza",
@@ -47,6 +49,16 @@ months_seasons = {"gennaio": "January", "febbraio": "February", "marzo": "March"
                   "summer", "primavera": "spring", "lo autunno": "fall"}
 
 
+def make_random(thing):
+    randomized = {}
+    while len(thing) != len(randomized):
+        for keys in thing:
+            key = random.choice(list(thing))
+            if thing[key] not in randomized:
+                randomized[key] = thing[key]
+    return randomized
+
+
 def quiz(choice):
     correct = 0
     wrong = 0
@@ -91,31 +103,40 @@ def menu():
         selection = input("Enter your selection: ")
         if selection == "1":
             print("Starting room items quiz")
-            quiz(room_items)
+            new_dict = make_random(room_items)
+            quiz(new_dict)
         elif selection == "2":
             print("Starting kitchen items quiz")
-            quiz(kitchen_items)
+            new_dict = make_random(kitchen_items)
+            quiz(new_dict)
         elif selection == "3":
             print("Starting food items quiz")
-            quiz(food_items)
+            new_dict = make_random(food_items)
+            quiz(new_dict)
         elif selection == "4":
             print("Starting ordinal numbers quiz")
-            quiz(ordinal_numbers)
+            new_dict = make_random(ordinal_numbers)
+            quiz(new_dict)
         elif selection == "5":
             print("Starting direct object pronouns quiz")
-            quiz(direct_object_pronouns)
+            new_dict = make_random(direct_object_pronouns)
+            quiz(new_dict)
         elif selection == "6":
             print("Starting indirect object pronouns quiz")
-            quiz(indirect_object_pronouns)
+            new_dict = make_random(indirect_object_pronouns)
+            quiz(new_dict)
         elif selection == "7":
             print("Starting holiday words quiz")
-            quiz(holiday_words)
+            new_dict = make_random(holiday_words)
+            quiz(new_dict)
         elif selection == "8":
             print("Starting car words quiz")
-            quiz(car_words)
+            new_dict = make_random(car_words)
+            quiz(new_dict)
         elif selection == "9":
             print("Starting months and seasons quiz")
-            quiz(months_seasons)
+            new_dict = make_random(months_seasons)
+            quiz(new_dict)
         elif selection == "10":
             practice = False
             print("Thank you for practicing.")

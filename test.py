@@ -1,4 +1,5 @@
 import random
+from pprint import pprint
 
 months_seasons = {"gennaio": "January", "febbraio": "February", "marzo": "March", "aprile": "April", "maggio": "May",
                   "giugno": "June", "luglio": "July", "agosto": "August", "settembre": "September", "ottobre":
@@ -33,18 +34,13 @@ def quiz(choice):
               f'Total: {len(choice)}')
 
 
-# quiz(months_seasons)
+print(len(months_seasons))
+randomized = {}
+while len(months_seasons) != len(randomized):
+    for keys in months_seasons:
+        add = random.choice(list(months_seasons))
+        if months_seasons[add] not in randomized:
+            randomized[add] = months_seasons[add]
+pprint(randomized)
+print(len(randomized))
 
-# print(len(months_seasons))
-# print(random.choice(list(months_seasons)))
-
-new_dict = {}
-add = random.choice(list(months_seasons))
-new_dict = new_dict[months_seasons.items()]
-print(new_dict)
-
-# for k, v in months_seasons.items():
-#     print(k, v)
-
-
-# TODO: figure out how to randomize the quiz (maybe create a random dict from the original dict?)
