@@ -46,7 +46,7 @@ car_words = {"portiera": "door", "maniglia": "handle", "volante": "steering whee
 months_seasons = {"gennaio": "January", "febbraio": "February", "marzo": "March", "aprile": "April", "maggio": "May",
                   "giugno": "June", "luglio": "July", "agosto": "August", "settembre": "September", "ottobre":
                   "October", "novembre": "November", "dicembre": "December", "l'inverno": "winter", "l'estate":
-                  "summer", "primavera": "spring", "lo autunno": "fall"}
+                  "summer", "primavera": "spring", "l'autunno": "fall"}
 
 
 def make_random(thing):
