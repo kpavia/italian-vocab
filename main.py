@@ -48,6 +48,9 @@ months_seasons = {"gennaio": "January", "febbraio": "February", "marzo": "March"
                   "October", "novembre": "November", "dicembre": "December", "l'inverno": "winter", "l'estate":
                   "summer", "primavera": "spring", "l'autunno": "fall"}
 
+directional_word = {"on top of": "sopra di", "to the left": "a sinistra", "to the right": "a destra", "below": "sotto",
+                    "next to": "vicino a"}
+
 
 def make_random(thing):
     randomized = {}
@@ -99,7 +102,8 @@ def menu():
               "7 - Holiday words quiz\n"
               "8 - Car words\n"
               "9 - Months and seasons\n"
-              "10 - Quit program\n")
+              "10 - Directional Words\n"
+              "11 - Quit program\n")
         selection = input("Enter your selection: ")
         if selection == "1":
             print("Starting room items quiz")
@@ -138,6 +142,10 @@ def menu():
             new_dict = make_random(months_seasons)
             quiz(new_dict)
         elif selection == "10":
+            print("Starting directional words quiz")
+            new_dict = make_random(directional_word)
+            quiz(new_dict)
+        elif selection == "11":
             practice = False
             print("Thank you for practicing.")
         else:
